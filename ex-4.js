@@ -82,3 +82,24 @@ let orders = [
 ];
 
 // Start coding here
+
+let mostExpensiveProductName = null;
+let maxProductPrice = 0;
+
+for (let i = 0; i < orders.length; i++) {
+
+  let order = orders[i];
+
+  if (order.productPrice > maxProductPrice) {  
+
+    mostExpensiveProductName = order.productName;
+    maxProductPrice = order.productPrice;
+
+  } 
+}
+
+if (mostExpensiveProductName !== null) {
+  console.log(`The most expensive product in orders: ${mostExpensiveProductName}`)
+} else {
+  console.log("No orders found.");
+}
